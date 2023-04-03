@@ -73,3 +73,4 @@ RUN apt-get update && \
 
 ENTRYPOINT ["startup.sh"]
 ENTRYPOINT ["final.sh]
+CMD ['bash"]
