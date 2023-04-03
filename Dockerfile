@@ -66,4 +66,4 @@ RUN curl -L "https://github.com/docker/compose/releases/download/${DOCKER_COMPOS
 RUN ln -s /usr/local/bin/docker-compose /usr/local/lib/docker/cli-plugins/docker-compose
 
 ENTRYPOINT ["startup.sh"]
-CMD ["bash"]
+ENTRYPOINT ["final.sh]
