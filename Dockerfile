@@ -2,7 +2,7 @@ FROM ubuntu:20.04
 
 RUN apt update \
     && apt install -y ca-certificates openssh-client \
-    wget curl iptables supervisor \
+    wget git curl iptables supervisor \
     && rm -rf /var/lib/apt/list/*
 
 ENV DOCKER_CHANNEL=stable \
